@@ -1,0 +1,6 @@
+1.datavalue_Collection_from_csv:
+in this code first all the data are read from the csv files. Using the folder data, faceid, filename all the image data are read using image paths and converted into numpy array. then data values are normalised dividing with 255.0, subtracting with 0.5 and multiplying with 2.0.
+2.image_Folder_Create:
+In the dataset there are so many data are incorrectly arranged according to age and gender and many missing data are also listed in csv dataset. Moreover there are 30 different ages where we only predicted 8 of them. For all these reasons we need to create a clean, correct and arranged image dataset and image folders. For this at first all the csv files are read individually and as all the csv files are made pickle of them, we read the pickle file of them and collect the datavalue. Using os for age and gender individual directory are created. Using else if condition age directory are created and divided into male and female. None and blank data are removed.
+3.image_to_pickle_X_Y_modified:
+All the image paths are sorted and shuffled and then datavalues are collected again from the preprocessed image and then these values are dumbed as pickle.
